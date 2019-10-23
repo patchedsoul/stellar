@@ -6,6 +6,7 @@
   * [Installation](#Installation)  
   * [Running](#Running)  
   * [UserGuide](#UserGuide)  
+  * [Sources](#Sources)  
 
 ---
 
@@ -104,7 +105,7 @@ __Installation__
      a compressed archive.  
      `git clone https://gitlab.com/shanedora/bornstellar.git`  
 
-  2. Navigate into the to level directory `cd stellar` and create a virtual 
+  2. Navigate into the top level directory `cd stellar/` and create a virtual 
      environment and activate it.  
      `virtualenv venv`  
      `source ./venv/bin/activate`
@@ -144,3 +145,68 @@ Type=simple
 ---
 
 ### <a name="UserGuide"></a>__UserGuide__  
+
+__Adim__  
+
+The admin page is where you can create entries for notes, tasks and goals but 
+also edit past entries which is really the only need here for Admin. It's 
+important to note that the only way you can mark a task or goal as complete or 
+incomplete is via the Admin interface. Other than this you will not need to 
+login to the Admin interface. If you do use the username and password you 
+created above when executing `python manage.py createsuperuser`.  
+
+__Home__  
+
+You can get to home via clicking on the navbar link or the __S__ logo in the 
+navbar. Home displays tags, tasks, goals, and notes based on what day you've 
+selected in the calendar. The calendar shows you days you've taken notes and 
+allows easy navigation to past entries.  
+
+Goals and tasks are only showed if they are incomplete. Remember you must go 
+into the Admin interface to mark a goal/task as complete or incomplete. Days 
+remaining to complete the goals/tasks are indicated to the left.  
+
+Tags are also shown on the left panel. These tags are listed left to right as 
+most popular to least popular. A number is printed along side each tag 
+indicating the exact number of entries related to it. These tags are clickable 
+down to one level deep. This means that by clicking a tag it will redirect you 
+to another page that displays every note ever taken related to that tag. From 
+this page there are no further features that allow additional queries. If 
+further querying of entries are needed visit the search page.  
+
+__Notes__  
+
+Notes can be created by clicking on the "Notes" link in the navbar. Simply enter 
+information into all the fields. All fields are required! The slug field is an 
+exception. You do not need to enter a slug as this is handled automatically.  
+
+__Search__  
+
+The search page presents a form. This form will allow querying of your entries 
+via every attribute related to a single entry. This form will not allow you to 
+search tasks and goals. For that you need to visit the Admin interface. If you 
+would like to export a list of entries from a search to PDF simply do the search 
+and then in your browser click print-save_as-pdf.  
+
+__Goals__  
+
+Goals can be created via the same method as you create notes. When entering the 
+date be sure to following a `mm/dd/yyyy` format while makeing sure you zero pad 
+the `mm/dd/` appropriately. So if it's March 03, 2019 you would enter `03/03/2019`. 
+Remember this is the date that the goal is estimated to be completed by. Remember 
+that once you complete a Goal you will have to visit the Admin interface by 
+clicking on the "Admin" link in the navbar and visiting that specific entry. From 
+there you can mark it as complete.  
+
+__Tasks__  
+
+Tasks can be created via the same method as Goals and Notes.  
+
+---  
+
+### <a name="Sources"></a>Sources  
+
+You're go-to-guide for learning more about Django.  
+[Django Docs](https://docs.djangoproject.com/en/2.1/)  
+
+---  
