@@ -1,0 +1,198 @@
+{% extends "pjx_stellar.html" %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static "css/app_notes.css" %}">
+<style type="text/css">
+#page1{
+background-color: #03fc8c;
+border-radius: 10px;
+color: #000000;
+}
+</style>
+<div class="row mynotes">
+<div class="col-lg-4">
+<div class="sticky-top">
+<div class="row" id="jscalsec"></div>
+<div class="populargenre">
+<h5>Popular Genre</h5>
+<hr>
+</div>
+<div class="genre">
+{% for g_x, g_y in genre_data %}
+<a href="{% url 'app_notes:genrelist' notes_genre=g_x %}">
+<span class="badge badge-pill badge-secondary">{{ g_x }} - {{ g_y }}</span>
+</a>
+{% endfor %}
+</div>
+<div class="populartags">
+<h5>Popular Tags</h5>
+<hr>
+</div>
+<div class="tags">
+{% for t_x, t_y in tag_data %}
+<a href="{% url 'app_notes:taglist' notes_tag=t_x %}">
+<span class="badge badge-pill badge-primary">{{ t_x }} - {{ t_y }}</span>
+</a>
+{% endfor %}
+</div>
+</div>
+</div>
+<div class="col-lg-8">
+<div class="goalssec">
+<hr>
+<h2>Goals</h2>	
+{% for goals in incomplete_goals %}
+{% if goals.time_left >= 2 %}
+<div class="entry"><p><span class="badge badge-info">{{ goals.time_left }} Days</span>{{ goals.formatted_markdown|safe }}</p></div>
+{% elif goals.time_left < 2 and goals.time_left > 0 %}
+<div class="entry"><p><span class="badge badge-warning">{{ goals.time_left }} Days</span>{{ goals.formatted_markdown|safe }}</p></div>
+{% elif goals.time_left <= 0 %}
+<div class="entry"><p><span class="badge badge-danger">{{ goals.time_left }} Days</span>{{ goals.formatted_markdown|safe }}</p></div>
+{% endif %}
+{% empty %}
+<p>No Goals</p>
+{% endfor %}
+<br>
+</div>
+<div class="taskssec">
+<hr>
+<h2>Tasks</h2>
+{% for tasks in incomplete_tasks %}
+{% if tasks.time_left >= 2 %}
+<div class="entry"><p><span class="badge badge-info">{{ tasks.time_left }} Days</span>{{ tasks.formatted_markdown|safe }}</p></div>
+{% elif tasks.time_left < 2 and tasks.time_left > 0 %}
+<div class="entry"><p><span class="badge badge-warning">{{ tasks.time_left }} Days</span>{{ tasks.formatted_markdown|safe }}</p></div>
+{% elif tasks.time_left <= 0%}
+<div class="entry"><p><span class="badge badge-danger">{{ tasks.time_left }} Days</span>{{ tasks.formatted_markdown|safe }}</p></div>
+{% endif %}
+{% empty %}
+<p>No Tasks</p>
+{% endfor %}
+<br>
+</div>
+<div id="notessec"></div>
+</div>
+</div>
+<script type="text/javascript">
+	var opt = {weekday: "long", month: 'long', day: 'numeric', year: 'numeric'};
+	var today = new Date();
+	var notes = [
+		{% for note in notes_list %}
+			{
+				date: "{{ note.date|date:"d/m/Y" }}",
+				text: "{{ note.formatted_markdown|escapejs }}",
+				title: "{{ note.title }}",
+				genre: "{{ note.genre }}",
+				tag: "{{ note.tag }}"
+			},
+		{% endfor %}
+	];
+</script>
+<script type="text/javascript">
+	var notesCalendar = jsCalendar.new("#jscalsec", "{% now "d/m/Y" %}", {
+		navigator : true,
+		navigatorPosition : "right",
+		zeroFill : false,
+		monthFormat : "month YYYY",
+		dayFormat : "DDD",
+		language : "en"
+	});
+	var notesDisplay = document.getElementById("notessec");
+	function showNote(date,ddate) {
+		var buffer = [];
+		var title_buffer = [];
+		var genre_buffer = [];
+		var tag_buffer = [];
+
+		for ( var i = 0; i < notes.length; i++){
+			if(date == notes[i].date){
+				buffer.push(notes[i].text);
+				title_buffer.push(notes[i].title);
+				genre_buffer.push(notes[i].genre);
+				tag_buffer.push(notes[i].tag);
+			}
+		}
+
+		notesDisplay.innerHTML = '';
+
+		var notessection = document.createElement('h2');
+		notessection.className = "thenotessection";
+		notessection.innerHTML = 'Notes';
+		notesDisplay.appendChild(document.createElement("hr"));
+		notesDisplay.appendChild(notessection);
+		var timestamp = document.createElement('h4');
+		timestamp.className = "timestamp";
+		timestamp.innerHTML = ddate;
+		notesDisplay.appendChild(timestamp);
+		notesDisplay.appendChild(document.createElement("br"));
+		notesDisplay.appendChild(document.createElement("br"));
+
+		var div;
+		var h4_n_title;
+		var s_genre;
+		var a_genre;
+		var s_tag;
+		var a_tag;
+		var tmp_tag;
+		var tmp_genre;
+
+		for (var i = 0; i < buffer.length; i++){
+
+			tmp_tag = tag_buffer[i];
+			tmp_genre = genre_buffer[i];
+
+			// the title
+			h4_n_title = document.createElement('h4');
+			h4_n_title.className = "thetitle";
+			h4_n_title.innerHTML = title_buffer[i];
+
+			// the genre
+			s_genre = document.createElement('span');
+			s_genre.className = "badge badge-pill badge-secondary";
+			s_genre.innerHTML = genre_buffer[i];
+			a_genre = document.createElement('a');
+			a_genre.className = "ngenre";
+			a_genre.href = "{% url 'app_notes:genrelist' notes_genre=12345 %}".replace(/12345/, tmp_genre.toString());
+			a_genre.appendChild(s_genre);
+
+			// the tag
+			s_tag = document.createElement('span');
+			s_tag.className = "badge badge-pill badge-primary";
+			s_tag.innerHTML = tag_buffer[i];
+			a_tag = document.createElement('a');
+			a_tag.className = "ntag";
+			a_tag.href = "{% url 'app_notes:taglist' notes_tag=12345 %}".replace(/12345/, tmp_tag.toString());
+			a_tag.appendChild(s_tag);
+
+			// header section
+			hdr = document.createElement('div');
+			hdr.className = "notes_hdr";
+			hdr.appendChild(h4_n_title);
+			hdr.appendChild(a_genre);
+			hdr.appendChild(a_tag);
+
+			// the body
+			div = document.createElement('div');
+			div.className = 'note';
+			div.innerHTML = buffer[i];
+
+			// append
+			notesDisplay.appendChild(hdr);
+			notesDisplay.appendChild(div);
+			notesDisplay.appendChild(document.createElement("hr"));
+			notesDisplay.appendChild(document.createElement("br"));
+
+		}
+	};
+
+	showNote("{% now "d/m/Y" %}", today.toLocaleDateString("en-US", opt));
+	notesCalendar.onDateClick(function(event, date){
+		showNote(	jsCalendar.tools.dateToString(date, "DD/MM/YYYY"),
+					jsCalendar.tools.dateToString(date, "day, month DD, YYYY"));
+	});
+	for (var i = 0; i < notes.length; i++) {
+		notesCalendar.select(notes[i].date);	
+	}
+</script>
+
+{% endblock content %}

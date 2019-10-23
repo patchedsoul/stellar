@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>stellar</title>
+{% include 'pjx_stellar_css.html' %}
+{% include 'bootstrap_4_css.html' %}
+{% include 'js_calendar_cdn.html' %}
+</head>
+<body>
+<div class="container">
+{% include 'navbar.html' %}
+{% block content %}{% endblock content %}
+</div>
+{% include 'bootstrap_4_js.html' %}
+</body>
+</html>

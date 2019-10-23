@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+<a class="navbar-brand" href="/">
+<img src="{% static "media/logo.png" %}">
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+<div class="navbar-nav mr-auto">
+<a class="nav-item nav-link" id="page0" href="/admin">Admin</a>
+<a class="nav-item nav-link" id="page1" href="/">Home</a>
+<a class="nav-item nav-link" id="page2" href="/search">Search</a>
+<a class="nav-item nav-link" id="page3" href="/create">Notes</a>
+<a class="nav-item nav-link" id="page4" href="/gcreate">Goals</a>
+<a class="nav-item nav-link" id="page5" href="/tcreate">Tasks</a>
+</div>
+<div class="navbar-nav counters">
+<button type="button" class="btn btn-light">Notes <span class="badge badge-primary">{{ notes }}</span>
+</button>
+<button type="button" class="btn btn-light">Goals <span class="badge badge-success">{{ cgoals }}</span>
+<span class="badge badge-danger">{{ ngoals }}</span>
+</button>
+<button type="button" class="btn btn-light">Tasks <span class="badge badge-success">{{ ctasks }}</span>
+<span class="badge badge-danger">{{ ntasks }}</span>
+</button>
+</div>
+</div>
+</nav>
+
+
+

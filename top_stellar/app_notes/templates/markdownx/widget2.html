@@ -1,0 +1,28 @@
+<!----------------------------------------------------------------------------->
+<!-- 
+File:       widget2.html
+
+Author:     Courtesy of Markdownx
+
+Brief:      This file overrides the default placement of the Markdownx preview
+            window. It allows us to use side-by-side comparision versus
+            horizontal comparison. For futher imformation refer to the
+            markdownx documentation
+
+            https://github.com/neutronX/django-markdownx
+
+-->
+<!----------------------------------------------------------------------------->
+
+<!-- Custom Placement of the Markdownx Preview -->
+<div class="markdownx row">
+    <div class="col-md-6">
+        {% include 'django/forms/widgets/textarea.html' %}
+    </div>
+
+    <!-- This lets us write/preview with side-by-side comparison versus
+    horizontal comparison which is annoying -->
+    <div class="col-md-6">
+        <div class="markdownx-preview"></div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+{% extends "pjx_stellar.html" %}
+{% load staticfiles %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static "css/app_notes_genre_list.css" %}">
+<style type="text/css">
+	#page1{
+		background-color: #03fc8c;
+		border-radius: 10px;
+		color: #000000;
+	}
+</style>
+<div class="col app_notes_genre_list">
+
+{% for notes in notes_list %}
+<h2 class="font-weight-bold">{{ notes.title }}</h2>
+<h4>{{ notes.date|date:"l, F d, Y" }}</h4>
+<div class="app_notes_tag_badges">
+<span class="badge badge-primary">{{ notes.tag }}</span>
+</div>
+<p>{{ notes.formatted_markdown|safe }}</p>
+<hr>
+<br>
+{% endfor %}
+
+<div class="row justify-content-center paginationlist">
+{% if is_paginated %}
+<ul class="pagination text-center">
+<div class="backtick">
+{% if page_obj.has_previous %}
+<li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+{% else %}
+<li class="disabled"><span>&laquo;</span></li>
+{% endif %}
+{% for i in paginator.page_range %}
+</div>
+<div class="pagenumbers">
+{% if page_obj.number == i %}
+<li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+{% else %}
+<li class="nonactive"><a href="?page={{ i }}">{{ i }}</a></li>
+{% endif %}
+</div>
+<div class="forwardtick">
+{% endfor %}
+{% if page_obj.has_next %}
+<li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+{% else %}
+<li class="disabled"><span>&raquo;</span></li>
+{% endif %}
+</div>
+</ul>
+{% endif %}
+</div>
+
+</div>
+{% endblock %}
