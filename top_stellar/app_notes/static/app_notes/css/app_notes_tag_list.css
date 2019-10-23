@@ -1,0 +1,22 @@
+.app_notes_tag_list{
+	margin-top: 150px;
+}
+.paginationlist{
+	padding-top: 20px;
+}
+.pagination li{
+	width: 30px;
+}
+.pagination .pagenumbers .active{
+	border: 1px solid #129bfc;
+	border-radius: 10px;
+	background-color: #129bfc;
+	color: black;
+}
+.pagination .pagenumbers .nonactive a{
+	color: #919191;
+}
+.pagination .pagenumbers .nonactive:hover{
+	transform: scale(2);
+	text-decoration: none !important;
+}
