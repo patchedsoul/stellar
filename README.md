@@ -19,7 +19,7 @@ __Shane Yost__
 As an active software engineer, hobbyist and student I struggle with 
 maintaining what I learn over time especially as these newly acquired skills 
 pick up in complexity. Reiterating over subjects and keeping a journal are two 
-potentional methods I implement to overcome this whether I'm in class taking 
+methods I implement to overcome this whether I'm in class taking 
 notes, at work, or just at home learning a new programming language.  
 
 Taking notes in classes usually starts off with precision, well indented lines, 
@@ -30,7 +30,7 @@ taking notes entirely or less frequently than we should. In addition to this
 keeping a hand written journal takes work and becomes horribly inefficient to 
 recall specific entries.  
 
-Stellar aims to help in these challenges. We can digitial manage our entries in 
+Stellar aims to help with these challenges. We can digitial manage our entries in 
 a database, use an object oriented model of querying these entries, and create 
 entries with either highly formatted markdown syntax or plain text format. In 
 addition, Stellar can track goals and tasks letting you know what is complete, 
@@ -52,7 +52,7 @@ of what it can do.
     syntax in realtime to help you correct and format your entires only once 
     versus going back and forth in getting your syntax right. Adding an image 
     is very easy, just locate your image in a file viewer and drag/drop it into 
-    the editor. Images are saved in a yea/month/day fashion to help improve 
+    the editor. Images are saved in a year/month/day fashion to help improve 
     lookups.  
 
     ![](./gifs/markdownx.gif)  
@@ -74,10 +74,10 @@ of what it can do.
     disadvantage. Only one tag can be given to each entry. If we assigned 5 tags 
     to every entry for a 1000 entries we would have quite the selection of tags 
     to search through. It would seem this would improve our queries 
-    categorically but in fact it adds entropy making it harder to search a very 
+    categorically but in fact it adds entropy making it harder to search for  
     specific entry. Stellar allows one additional attribute called a __Genre__ 
     to add one extra level of classification. In combination of the __Genre__ 
-    and a generic tag called __Tag__ provides a more empirical method forcing 
+    and the generic tag called __Tag__, Stellar provides a more empirical method forcing 
     you to think about how an entry should be classified.  
 
     ![](./gifs/tags.gif)  
