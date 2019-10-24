@@ -53,6 +53,8 @@ of what it can do.
     syntax in realtime to help you correct and format your entires only once 
     versus going back and forth in getting your syntax right.  
 
+    ![](./gifs/markdownx.gif)  
+
   * Stellar uses [jsCalendar](https://gramthanos.github.io/jsCalendar/index.html) 
     to allow you to easily browse recent entries for the month or even several 
     years back. It highlights days that you took entries so you don't waste time 
