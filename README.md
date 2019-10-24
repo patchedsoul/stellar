@@ -133,15 +133,7 @@ This command will start the django development server and will make Stellar
 visiable at the URL __localhost:8000__ in your browser.  
 
 Additional configuration can be done such as creating an alias in your `.bashrc` 
-to start the server such as `alias stellar='python manage.py runserver`. You can 
-add it as a service such as ...  
-
-```
-[service]
-User=<admin_user_name>
-ExecStart=/usr/bin/python ~/path/to/stellar/top_stellar/manage.py python runserver 0.0.0.0:8000
-Type=simple
-```
+to start the server such as `alias stellar='python manage.py runserver`.  
 
 ---
 
