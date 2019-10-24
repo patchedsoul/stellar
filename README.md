@@ -95,7 +95,7 @@ __Prerequisites__
 
 __Installation__  
 
-<h1 style="color:blue">Click gif for enlarged view</h1>  
+<span style="color:red">some **CLICK GIF FOR ENLARGED VIEW** text</span>  
 
 ![](./gifs/installation.gif)  
 
