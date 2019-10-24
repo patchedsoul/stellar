@@ -1,6 +1,8 @@
-# Stellar
+# Stellar 
+<img style="float: right;" src="./gifs/logo.png">  
 
-### <a name="table-of-contents"></a>Table of Contents  
+
+# <a name="table-of-contents"></a>Table of Contents  
   * [Author](#Author)  
   * [Introduction](#Introduction)  
   * [Installation](#Installation)  
