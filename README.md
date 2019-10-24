@@ -1,5 +1,4 @@
-# Welcome to Stellar!  
-
+# Welcome to Stellar!
 # <a name="table-of-contents"></a>Table of Contents  
   * [Author](#Author)  
   * [Introduction](#Introduction)  
