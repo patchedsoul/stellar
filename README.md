@@ -1,6 +1,4 @@
-# Stellar 
-<img style="float: right;" src="./gifs/logo.png">  
-
+# Stellar  
 
 # <a name="table-of-contents"></a>Table of Contents  
   * [Author](#Author)  
@@ -12,7 +10,7 @@
 
 ---
 
-### <a name="Author"></a>Author  
+# <a name="Author"></a>Author  
 
 __Shane Yost__  
 [scy86dev@gmail.com](scy86dev@gmail.com)  
@@ -20,7 +18,7 @@ __Shane Yost__
 
 ---
 
-### <a name="Introduction"></a>__Introduction__  
+# <a name="Introduction"></a>__Introduction__  
 
 As an active software engineer, hobbyist and student I struggle with 
 maintaining what I learn over time especially as these newly acquired skills 
@@ -80,7 +78,7 @@ of what it can do.
 
 ---
 
-### <a name="Installation"></a>__Installation__  
+# <a name="Installation"></a>__Installation__  
 
 __Prerequisites__  
 
@@ -103,8 +101,9 @@ __Prerequisites__
 
 __Installation__  
 
-![](./gifs/installation.gif)  
+## __Click gif for enlarged view__  
 
+![](./gifs/installation.gif)  
 
   1. Clone the repository either via `git clone` or downloading the repository as 
      a compressed archive.  
@@ -135,7 +134,7 @@ __Installation__
 
 ---
 
-### <a name="Running"></a>__Running__  
+# <a name="Running"></a>__Running__  
 
 Running Stellar can be configured in several ways but it all boils down to one 
 command.  
@@ -150,7 +149,7 @@ to start the server such as `alias stellar='python manage.py runserver`.
 
 ---
 
-### <a name="UserGuide"></a>__UserGuide__  
+# <a name="UserGuide"></a>__UserGuide__  
 
 __Adim__  
 
@@ -210,7 +209,7 @@ Tasks can be created via the same method as Goals and Notes.
 
 ---  
 
-### <a name="Sources"></a>Sources  
+# <a name="Sources"></a>Sources  
 
 You're go-to-guide for learning more about Django.  
 [Django Docs](https://docs.djangoproject.com/en/2.1/)  
