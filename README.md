@@ -20,8 +20,7 @@ As an active software engineer, hobbyist and student I struggle with
 maintaining what I learn over time especially as these newly acquired skills 
 pick up in complexity. Reiterating over subjects and keeping a journal are two 
 potentional methods I implement to overcome this whether I'm in class taking 
-notes, at work solving complex problems, or just at home learning a new 
-programming language.  
+notes, at work, or just at home learning a new programming language.  
 
 Taking notes in classes usually starts off with precision, well indented lines, 
 bullet points, graphs, organization, timestamps and much more. However, after 
