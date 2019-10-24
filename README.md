@@ -66,6 +66,8 @@ of what it can do.
     to allow custom search methods. We can search via every attribute that a 
     entry is made up of (e.g. title, date, content, tags, etc...).  
 
+    ![](./gifs/search.gif)  
+
   * Stellar allows tagging in a unique way that at first may seem at a 
     disadvantage. Only one tag can be given to each entry. If we assigned 5 tags 
     to every entry for a 1000 entries we would have quite the selection of tags 
