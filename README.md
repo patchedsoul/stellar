@@ -74,7 +74,7 @@ of what it can do.
 
 # <a name="Installation"></a>__Installation__  
 
-__Prerequisites__  
+### __Prerequisites__  
 
   * Python 3+  
     [Downloading](https://wiki.python.org/moin/BeginnersGuide/Download)  
@@ -93,9 +93,9 @@ __Prerequisites__
     [Python on Windows](https://docs.python.org/3.3/using/windows.html)  
     [Python on Linux/MacOSX](https://docs.python.org/3.3/using/unix.html)  
 
-__Installation__  
+### __Installation__  
 
-## **CLICK GIF FOR ENLARGED VIEW**  
+##### **CLICK GIF FOR ENLARGED VIEW**  
 
 ![](./gifs/installation.gif)  
 
