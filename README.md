@@ -101,6 +101,9 @@ __Prerequisites__
 
 __Installation__  
 
+![](./gifs/installation.gif)  
+
+
   1. Clone the repository either via `git clone` or downloading the repository as 
      a compressed archive.  
      `git clone https://gitlab.com/shanedora/stellar.git`  
