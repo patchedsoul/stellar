@@ -50,7 +50,10 @@ of what it can do.
   * Stellar uses the editor plugin called __MarkdownX__ to create notes, goals 
     and tasks. When using markdown syntax the editor will display the rendered 
     syntax in realtime to help you correct and format your entires only once 
-    versus going back and forth in getting your syntax right.  
+    versus going back and forth in getting your syntax right. Adding an image 
+    is very easy, just locate your image in a file viewer and drag/drop it into 
+    the editor. Images are saved in a yea/month/day fashion to help improve 
+    lookups.  
 
     ![](./gifs/markdownx.gif)  
 
