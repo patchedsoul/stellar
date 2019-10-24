@@ -1,5 +1,5 @@
-# Powered By: ![[](https://www.djangoproject.com/)](./gifs/django_logo.png)  
 # Welcome to Stellar!  
+# Powered By: ![[](https://www.djangoproject.com/)](./gifs/django_logo.png)  
 
 # <a name="table-of-contents"></a>Table of Contents  
   * [Author](#Author)  
