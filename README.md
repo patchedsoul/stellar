@@ -1,6 +1,6 @@
 # Welcome to Stellar!  
 
-[[Powered by](https://www.djangoproject.com/)](https://iocodex.com/wp-content/uploads/2019/07/django-13-1175187.png)  
+[[Powered by](https://www.djangoproject.com/)](django_logo.png)  
 
 # <a name="table-of-contents"></a>Table of Contents  
   * [Author](#Author)  
