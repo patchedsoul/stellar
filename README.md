@@ -74,7 +74,7 @@ of what it can do.
     disadvantage. Only one tag can be given to each entry. If we assigned 5 tags 
     to every entry for a 1000 entries we would have quite the selection of tags 
     to search through. It would seem this would improve our queries 
-    categorically but in fact it adds entropy making it harder to search for  
+    categorically but in fact it adds entropy making it harder to search for 
     specific entry. Stellar allows one additional attribute called a __Genre__ 
     to add one extra level of classification. In combination of the __Genre__ 
     and the generic tag called __Tag__, Stellar provides a more empirical method forcing 
