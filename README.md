@@ -114,6 +114,14 @@ __Installation__
      file or all at once via the following command.  
      `pip install -r /path/to/requirements.txt`  
 
+  4. Edit the `pjx_stellar/settings.py` on the line that says the following...  
+
+     `TIME_ZONE = 'America/Denver'`
+
+     to a timezone of your choosing. Viable timezones can be acquired from this 
+     [link](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Refer 
+     to the __TZ database name__ column for your prefered option.   
+
   4. The following commands only need to be run once.  
      `python manage.py makemigrations`  
      `python manage.py migrate`  
