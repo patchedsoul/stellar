@@ -1,6 +1,6 @@
 # Welcome to Stellar!  
 
-[[Powered by](https://www.djangoproject.com/)](django_logo.png)  
+[[Powered by](https://www.djangoproject.com/)](./gifs/django_logo.png)  
 
 # <a name="table-of-contents"></a>Table of Contents  
   * [Author](#Author)  
