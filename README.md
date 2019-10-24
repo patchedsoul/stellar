@@ -1,5 +1,6 @@
-# Welcome to Stellar!
-# <a name="table-of-contents"></a>Table of Contents  
+# __Welcome to Stellar!__  
+
+# <a name="table-of-contents"></a>__Table of Contents__  
   * [Author](#Author)  
   * [Introduction](#Introduction)  
   * [Installation](#Installation)  
@@ -7,15 +8,11 @@
   * [UserGuide](#UserGuide)  
   * [Sources](#Sources)  
 
----
-
-# <a name="Author"></a>Author  
+# <a name="Author"></a>__Author__  
 
 __Shane Yost__  
 [scy86dev@gmail.com](scy86dev@gmail.com)  
 [shaneyost.io](https://www.shaneyost.io)  
-
----
 
 # <a name="Introduction"></a>__Introduction__  
 
@@ -75,8 +72,6 @@ of what it can do.
     and a generic tag called __Tag__ provides a more empirical method forcing 
     you to think about how an entry should be classified.  
 
----
-
 # <a name="Installation"></a>__Installation__  
 
 __Prerequisites__  
@@ -130,8 +125,6 @@ __Installation__
      `python manage.py migrate`  
      `python manage.py createsuperuser`  
      `python manage.py collectstatic`  
-
----
 
 # <a name="Running"></a>__Running__  
 
@@ -206,11 +199,7 @@ __Tasks__
 
 Tasks can be created via the same method as Goals and Notes.  
 
----  
-
 # <a name="Sources"></a>Sources  
 
 You're go-to-guide for learning more about Django.  
 [Django Docs](https://docs.djangoproject.com/en/2.1/)  
-
----  
