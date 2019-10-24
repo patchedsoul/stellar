@@ -95,7 +95,7 @@ __Prerequisites__
 
 __Installation__  
 
-<span style="color:red">some **CLICK GIF FOR ENLARGED VIEW** text</span>  
+## **CLICK GIF FOR ENLARGED VIEW**  
 
 ![](./gifs/installation.gif)  
 
