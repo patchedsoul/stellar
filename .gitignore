@@ -8,4 +8,5 @@ db.sqlite3
 db.sqlite3-journal
 top_stellar/media
 top_stellar/static
+top_stellar/app_notes/migrations/*_initial.py
 venv
