@@ -78,6 +78,8 @@ of what it can do.
     and a generic tag called __Tag__ provides a more empirical method forcing 
     you to think about how an entry should be classified.  
 
+    ![](./gifs/tags.gif)  
+
 # <a name="Installation"></a>__Installation__  
 
 ### __Prerequisites__  
