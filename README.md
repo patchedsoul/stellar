@@ -103,7 +103,7 @@ __Installation__
 
   1. Clone the repository either via `git clone` or downloading the repository as 
      a compressed archive.  
-     `git clone https://gitlab.com/shanedora/bornstellar.git`  
+     `git clone https://gitlab.com/shanedora/stellar.git`  
 
   2. Navigate into the top level directory `cd stellar/` and create a virtual 
      environment and activate it.  
