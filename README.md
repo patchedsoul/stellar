@@ -12,7 +12,6 @@
 
 __Shane Yost__  
 [scy86dev@gmail.com](scy86dev@gmail.com)  
-[shaneyost.io](https://www.shaneyost.io)  
 
 # <a name="Introduction"></a>__Introduction__  
 
