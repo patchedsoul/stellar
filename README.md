@@ -60,6 +60,8 @@ of what it can do.
     years back. It highlights days that you took entries so you don't waste time 
     searching days that have none.  
 
+    ![](./gifs/jscalendar.gif)  
+
   * Stellar uses [django_filters](https://django-filter.readthedocs.io/en/master/) 
     to allow custom search methods. We can search via every attribute that a 
     entry is made up of (e.g. title, date, content, tags, etc...).  
