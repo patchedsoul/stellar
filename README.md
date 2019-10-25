@@ -149,7 +149,7 @@ of what it can do.
 # <a name="Running"></a>__Running__  
 
 Run Stellar requires activating your virtual environment and starting the light 
-weight server that comes prepacked with django. Creating a virtual environment 
+weight server that comes prepackaged with django. Creating a virtual environment 
 like we did above isn't required but it is recommended. A typical startup 
 routine may look like the following...  
 
