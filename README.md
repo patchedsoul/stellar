@@ -235,6 +235,9 @@ text will appear to the right so you can validate what you're typing. Ensure
 that the date field __is filled out in a `yyyy/mm/dd` format while zero padding 
 the `mm/mm` if needed!__ It will autofill to todays date otherwise.  
 
+Because the editor supports markdown sytax for formatting your text it will 
+also support html and some inline CSS!  
+
 __Search__  
 
 The search page presents a form. This form will allow querying of your entries 
