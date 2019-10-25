@@ -155,7 +155,7 @@ routine may look like the following...
 
   1. Open a shell and navigate to Stellar and activate the virtual environment.  
 
-     __Windows Powershell__
+     __Windows Powershell__  
      `cd .\stellar\venv\Scripts`  
      `.\activate.ps1`  
 
