@@ -15,7 +15,7 @@ __Shane Yost__
 
 # <a name="Introduction"></a>__Introduction__  
 
-As an software engineer, hobbyist and student I struggle with 
+As a software engineer, hobbyist and student I struggle with 
 maintaining what I learn over time especially as concepts pick up in 
 complexity. Reiterating over concepts and keeping a journal are two 
 methods I implement to overcome this whether I'm in class taking notes, at work 
