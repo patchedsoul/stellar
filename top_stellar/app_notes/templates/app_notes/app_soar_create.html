@@ -2,9 +2,9 @@
 {% load staticfiles %}
 {% load widget_tweaks %}
 {% block content %}
-<link rel="stylesheet" href="{% static "css/app_notes_create.css" %}">
+<link rel="stylesheet" href="{% static "css/app_soar_create.css" %}">
 <style type="text/css">
-#page3{
+#page6{
 background-color: #03fc8c;
 border-radius: 10px;
 color: #000000;
@@ -15,8 +15,8 @@ border-radius: 10px;
 color: #000000;
 }
 </style>
-<div class="col app_notes_create">
-<h1 class="text-center"><b>Notes</b></h1>
+<div class="col app_soar_create">
+<h1 class="text-center"><b>SOAR</b></h1>
 <br>
 <form method="POST" enctype="multipart/form-data">
 {% csrf_token %}
@@ -24,8 +24,8 @@ color: #000000;
 <div class="card-body">
 <div class="row">
 <div class="form-group col-md-4 col-md-3">
-{{ form.title.label_tag }}
-{% render_field form.title class="form-control" %}
+{{ form.date.label_tag }}
+{% render_field form.date class="form-control" %}
 </div>
 <div class="form-group col-md-4 col-md-3">
 {{ form.genre.label_tag }}
@@ -36,15 +36,21 @@ color: #000000;
 {% render_field form.tag class="form-control" %}
 </div>
 </div>
-<div class="row">
-<div class="form-group col-md-4 col-md-3">
-{{ form.date.label_tag }}
-{% render_field form.date class="form-control" %}
-</div>
+<div>
+{{ form.situation.label_tag }}
+{% render_field form.situation class="form-control" %}
 </div>
 <div>
-{{ form.body.label_tag }}
-{% render_field form.body class="form-control" %}
+{{ form.obstacle.label_tag }}
+{% render_field form.obstacle class="form-control" %}
+</div>
+<div>
+{{ form.action.label_tag }}
+{% render_field form.action class="form-control" %}
+</div>
+<div>
+{{ form.result.label_tag }}
+{% render_field form.result class="form-control" %}
 </div>
 <br>
 <button type="submit" class="btn btn-primary">Create</button>

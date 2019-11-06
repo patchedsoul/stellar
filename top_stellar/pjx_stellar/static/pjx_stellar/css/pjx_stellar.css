@@ -5,4 +5,16 @@
 	margin-left: 10px;
 }
 
+.navbar .dropdown-menu {
+  background-color: #343A40;
+}
 
+/* and this styles the dropdwon trigger link, when open */
+.navbar .dropdown.show a { 
+  background-color: #343A40;
+}
+.navbar .dropdown.show a:hover { 
+  background-color: #03fc8c;
+  color: black;
+  border-radius: 10px;
+}

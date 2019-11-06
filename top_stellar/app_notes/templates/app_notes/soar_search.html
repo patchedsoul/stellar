@@ -1,0 +1,89 @@
+{% extends "pjx_stellar.html" %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+{% block content %}
+<link rel="stylesheet" href="{% static "css/app_soar_search.css" %}">
+<style type="text/css">
+#page7{
+background-color: #03fc8c;
+border-radius: 10px;
+color: #000000;
+}
+#search{
+background-color: #03fc8c;
+border-radius: 10px;
+color: #000000;
+}
+</style>
+<div class="col app_soar_search">
+<h1 class="text-center"><b>SOAR</b></h1>
+<br>
+    <form method="get">
+        <div class="card bg-light">
+            <div class="card-body">
+                <div class="row">
+                    <div class="form-group col-md-4 col-md-3">
+                        {{ filter.form.m_date.label_tag }}
+                        {% render_field filter.form.m_date class="form-control" %}
+                    </div>
+                    <div class="form-group col-md-4 col-md-3">
+                        {{ filter.form.y_date.label_tag }}
+                        {% render_field filter.form.y_date class="form-control" %}
+                    </div>
+                    <div class="form-group col-md-4 col-md-3">
+                        {{ filter.form.genre.label_tag }}
+                        {% render_field filter.form.genre class="form-control" %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4 col-md-3">
+                        {{ filter.form.tag.label_tag }}
+                        {% render_field filter.form.tag class="form-control" %}
+                    </div>
+                    <div class="form-group col-md-4 col-md-3">
+                        {{ filter.form.s_body.label_tag }}
+                        {% render_field filter.form.s_body class="form-control" %}
+                    </div>
+                    <div class="form-group col-md-4 col-md-3">
+                        {{ filter.form.o_body.label_tag }}
+                        {% render_field filter.form.o_body class="form-control" %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4 col-md-3">
+                        {{ filter.form.a_body.label_tag }}
+                        {% render_field filter.form.a_body class="form-control" %}
+                    </div>
+                    <div class="form-group col-md-4 col-md-3">
+                        {{ filter.form.r_body.label_tag }}
+                        {% render_field filter.form.r_body class="form-control" %}
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </form>
+
+<div class="results">
+    {% for soar in filter.qs %}
+        <h2><b>{{ soar.date|date:"l, F d, Y" }}</b></h2>
+        <a><span class="badge badge-primary">{{ soar.genre }}</span></a>
+        <a><span class="badge badge-secondary">{{ soar.tag }}</span></a>
+        <h4><b>Situation</b></h4>
+        <p>{{ soar.s_formatted_markdown|safe }}</p>
+        <h4><b>Obstacles</b></h4>
+        <p>{{ soar.o_formatted_markdown|safe }}</p>
+        <h4><b>Actions</b></h4>
+        <p>{{ soar.a_formatted_markdown|safe }}</p>
+        <h4><b>Results</b></h4>
+        <p>{{ soar.r_formatted_markdown|safe }}</p>
+        <hr>
+        <br>
+    {% endfor %}
+</div>
+
+
+</div>
+
+
+{% endblock content %}

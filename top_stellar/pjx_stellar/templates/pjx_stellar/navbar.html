@@ -8,20 +8,36 @@
 </button>
 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 <div class="navbar-nav mr-auto">
-<a class="nav-item nav-link" id="page0" href="/admin">Admin</a>
-<a class="nav-item nav-link" id="page1" href="/">Home</a>
-<a class="nav-item nav-link" id="page2" href="/search">Search</a>
-<a class="nav-item nav-link" id="page3" href="/create">Notes</a>
-<a class="nav-item nav-link" id="page4" href="/gcreate">Goals</a>
-<a class="nav-item nav-link" id="page5" href="/tcreate">Tasks</a>
+<a class="nav-item nav-link" id="page0" href="/admin"><i class="fas fa-cog"></i> Admin</a>
+<a class="nav-item nav-link" id="page1" href="/"><i class="fas fa-home"></i> Home</a>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="create" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa-edit"></i> Create</a>
+<div class="dropdown-menu dropdown-primary" aria-labelledby="create">
+<a class="nav-item nav-link" id="page3" href="/create"><i class="fas fa-sticky-note"></i> Notes</a>
+<a class="nav-item nav-link" id="page6" href="/screate"><i class="fas fa-star-half-alt"></i> SOAR</a>
+<a class="nav-item nav-link" id="page4" href="/gcreate"><i class="fas fa-trophy"></i> Goals</a>
+<a class="nav-item nav-link" id="page5" href="/tcreate"><i class="fas fa-thumbtack"></i> Tasks</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="search" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-search"></i> Search</a>
+<div class="dropdown-menu dropdown-primary" aria-labelledby="search">
+<a class="nav-item nav-link" id="page2" href="/search"><i class="fas fa-sticky-note"></i> Notes</a>
+<a class="nav-item nav-link" id="page7" href="/ssearch"><i class="fas fa-star-half-alt"></i> SOAR</a>
+<a class="nav-item nav-link" id="page8" href="/gsearch"><i class="fas fa-trophy"></i> Goals</a>
+<a class="nav-item nav-link" id="page9" href="/tsearch"><i class="fas fa-thumbtack"></i> Tasks</a>
+</div>
+</li>
 </div>
 <div class="navbar-nav counters">
-<button type="button" class="btn btn-light">Notes <span class="badge badge-primary">{{ notes }}</span>
+<button type="button" class="btn btn-light"><i class="fas fa-sticky-note"></i> Notes <span class="badge badge-primary">{{ notes }}</span>
 </button>
-<button type="button" class="btn btn-light">Goals <span class="badge badge-success">{{ cgoals }}</span>
+<button type="button" class="btn btn-light"><i class="fas fa-star-half-alt"></i> SOAR <span class="badge badge-light">{{ soar }}</span>
+</button>
+<button type="button" class="btn btn-light"><i class="fas fa-trophy"></i> Goals <span class="badge badge-success">{{ cgoals }}</span>
 <span class="badge badge-danger">{{ ngoals }}</span>
 </button>
-<button type="button" class="btn btn-light">Tasks <span class="badge badge-success">{{ ctasks }}</span>
+<button type="button" class="btn btn-light"><i class="fas fa-thumbtack"></i> Tasks <span class="badge badge-success">{{ ctasks }}</span>
 <span class="badge badge-danger">{{ ntasks }}</span>
 </button>
 </div>

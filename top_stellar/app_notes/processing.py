@@ -1,4 +1,4 @@
-from .models import Notes, Goals, Tasks
+from .models import Notes, Soar, Goals, Tasks
 from django.db.models import Count
 from collections import Counter
 
@@ -10,6 +10,8 @@ def return_top_tags(model_name, attribute_name, is_nulls):
     top_tags = []
     if model_name == 'notes':
         top_tags = list(Notes.objects.values_list(attribute_name, flat=True))
+    elif model_name == 'soar':
+        top_tags = list(Soar.objects.values_list(attribute_name, flat=True))
     elif model_name == 'goals':
         top_tags = list(Goals.objects.values_list(attribute_name, flat=True))
     elif model_name == 'tasks':
@@ -43,6 +45,12 @@ def return_num_occur(model_name, top_tags, attr_name):
                 occur[x] = Notes.objects.filter(tag__exact=top_tags[x]).count()
             elif attr_name == 'genre':
                 occur[x] = Notes.objects.filter(genre__exact=top_tags[x]).count()
+    elif model_name == 'soar':
+        for x, label in enumerate(top_tags):
+            if attr_name == 'tag':
+                occur[x] = Soar.objects.filter(tag__exact=top_tags[x]).count()
+            elif attr_name == 'genre':
+                occur[x] = Soar.objects.filter(genre__exact=top_tags[x]).count()
     elif model_name == 'goals':
         for x, label in enumerate(top_tags):
             if attr_name == 'tag':

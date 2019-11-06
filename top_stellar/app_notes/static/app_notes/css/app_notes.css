@@ -1,27 +1,21 @@
-.populartags{
+.topstuff{
 	margin-top: 50px;
 }
-.populargenre{
+.topstuff{
 	margin-top: 50px;
 }
-.tags{
+.tagging{
 	width: 300px;
 	display: flex;
 	flex-wrap: wrap;
 	padding-left: 5px;
 }
-.tags a{
+.tagging a{
 	padding-right: 5px;
 }
-.genre{
-	width: 300px;
-	display: flex;
-	flex-wrap: wrap;
-	padding-left: 5px;
-}
-.genre a{
-	padding-right: 5px;
-}
+
+
+
 
 
 .mynotes{
@@ -36,6 +30,8 @@
 .mynotes .badge:hover{
 	transform: scale(1.1);
 }
+
+
 
 
 
