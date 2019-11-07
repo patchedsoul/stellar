@@ -82,15 +82,15 @@ Here are the requirements of stellar that are necessary in making the above poss
     `git clone https://gitlab.com/shanedora/stellar.git`  
 
   * Open your shell and navigate to the top level directory.  
-    `cd /path/to/stellar`  
+    `cd stellar/`  
 
   * Create and activate virtual environment (recommended but not required)  
     `virtualenv venv`  
     `source ./venv/bin/activate`  
-      * NOTE: The second above for activating your virtual environment may differ slightly in its syntax. See the below section on __Running__ for what it might look like.  
+     NOTE: The second command above for activating your virtual environment may differ slightly in its syntax for Windows users. See the below section on __Running__ for what it might look like.  
 
   * Install all the required dependencies.  
-    `pip install -r /path/to/requirements.txt`  
+    `pip install -r stellar/requirements.txt`  
 
   * If you timezone is not `America/Denver` then refer to [__this link__](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) for your preferred timezone. Once you have it open the file __`stellar/top_stellar/pjx_stellar/settings.py`__ and edit the line __`TIME_ZONE = 'America/Denver'`__ according to your timezone.  
 
@@ -154,15 +154,15 @@ The dropdown link _Create_ and sublink _SOAR_ will redirect you to the page for 
 
 __Create--Goals & Create--Tasks__  
 
-The dropdown link _Create_ and sublink _Goals or Tasks_ will redirect you to the page for creating goal/task entries. All fields are required here. The date field is the date that you expect to compelete the goal/task. The body field is a markdown field. Enter text with markup and a rendered view will be shown off to the right. click the button _Create_ to submit the entry to the database. By default all incomplete goals/tasks will be displayed on the homepage. Therefore, when you have completed the goal/task you must log into the admin interface, select _Goals or Tasks_, and find the goal/task of interest. _Goals or Tasks_ incomplete have a red colored `x` in the table. Click this entry and edit the complete field by checking the box which will mark it as complete. Now it will be removed from the homepage. On the homepage you will badges to the left of each goal/task indicating the amount of days left to complete it. When you get down to 0 days the badge will be red. When you get down to 1 day the badge will be yellow and for 2 or more days out the badge will be a navy blue.  
+The dropdown link _Create_ and sublink _Goals or Tasks_ will redirect you to the page for creating goal/task entries. All fields are required here. The date field is the date that you expect to compelete the goal/task. The body field is a markdown field. Enter text with markup and a rendered view will be shown off to the right. click the button _Create_ to submit the entry to the database. By default all incomplete goals/tasks will be displayed on the homepage. Therefore, when you have completed the goal/task you must log into the admin interface, select _Goals or Tasks_, and find the goal/task of interest. _Goals or Tasks_ incomplete have a red colored `x` in the table. Click this entry and edit the complete field by checking the box which will mark it as complete. Now it will be removed from the homepage. On the homepage you will see badges to the left of each goal/task indicating the amount of days left to complete it. When you get down to 0 days the badge will be red. When you get down to 1 day the badge will be yellow and for 2 or more days out the badge will be a navy blue.  
 
 __Search__  
 
-The dropdown link _Search_ will provide sublinks to various models to search which if not clear now are _Notes, SOAR, Goals and Tasks_. None of the fields are required so you can just pick one of them or two of them or even all them for carrying out relatively advanced searches of that respective model. Leaving all fields blank and click _Search_ will result in all notes being displayed. If you would like to export this page to a pdf simply do so by using your browsers print-to-pdf feature. Printing to pdf will not only capture what entries are displayed on the page but will show the data entered into the form so you can recreate the results in the future if need be.  
+The dropdown link _Search_ will provide sublinks to various models to search which if not clear now are _Notes, SOAR, Goals and Tasks_. None of the fields are required so you can just pick one of them or two of them or even all them for carrying out relatively advanced searches of that respective model. Leaving all fields blank and clicking _Search_ will result in all notes being displayed. If you would like to export this page to a pdf simply do so by using your browsers print-to-pdf feature. Printing to pdf will not only capture what entries are displayed on the page but will show the data entered into the form so you can recreate the results in the future if need be.  
 
 #### <a name="Sources"></a>__Sources__  
 
 Building stellar has been an on going effort. Each year I add to stellar increasing it's scope and intended audience. If you have a suggestion feel free to email and I'll take it into consideration for the next release. A big thanks to the django reddit community for providing guidance when I needed it.  
 
-__Cheers ~__  
-__Shane__  
+Cheers ~  
+Shane  
