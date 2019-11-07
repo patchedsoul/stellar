@@ -76,6 +76,8 @@ Here are the requirements of stellar that are necessary in making the above poss
     First off, if you don't use virtualenv then you should be. It is incredibly easy and will isolate the stellar python environment from your systems environment. This will need to be installed prior to the next section should you choose to use virtualenv. It is not a requirement to use but please do so for the sake of your environment.  
     [Pip Install](https://pypi.org/project/virtualenv/)  
 
+![](./gifs/installation.gif)  
+
 ##### __Installation__  
 
   * Clone the repository at this time or download the compressed archive.  
