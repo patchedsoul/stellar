@@ -1,159 +1,108 @@
+![](./gifs/showcase.gif)  
+
 # __Welcome to Stellar!__  
 
-# <a name="table-of-contents"></a>__Table of Contents__  
+#### <a name="table-of-contents"></a>__Table of Contents__  
   * [Author](#Author)  
   * [Introduction](#Introduction)  
   * [Installation](#Installation)  
   * [Running](#Running)  
+  * [Stopping](#Stopping)  
   * [UserGuide](#UserGuide)  
   * [Sources](#Sources)  
 
-# <a name="Author"></a>__Author__  
+#### <a name="Author"></a>__Author__  
 
 __Shane Yost__  
 [scy86dev@gmail.com](scy86dev@gmail.com)  
 
-# <a name="Introduction"></a>__Introduction__  
+#### <a name="Introduction"></a>__Introduction__  
 
-As a software engineer, hobbyist and student I struggle with 
-maintaining what I learn over time especially as concepts pick up in 
-complexity. Reiterating over concepts and keeping a journal are two 
-methods I implement to overcome this whether I'm in class taking notes, at work 
-learning a new tool, or at home working on a side project.  
+There are two types of students/engineers, those that maintain a stellar looking journal and those that do not. Whether or not you do doesn’t mean you’re a better student/engineer. How effective a journal can be is directly proportional to the efficiency in maintaining it. This is why you either do or do not there is no try.  
 
-Taking notes in classes usually starts off with precision, well indented lines, 
-bullet points, graphs, organization, timestamps and much more. However, after 
-two or three weeks we generally lose this stamina and discipline. Eventually our 
-notes become rambled lines of choatic chicken scratch. Sometimes we even stop 
-taking notes entirely or less frequently than we should. In addition to this 
-keeping a hand written journal takes work and becomes horribly inefficient to 
-recall specific entries.  
+From a high level, stellar aims to do three things. First, it makes keeping a journal efficient. Secondly, it enforces a professional writing pattern called classification-division. Lastly, it encourages two learning techniques called spaced-repetition and conceptual-chunking.  
 
-Stellar aims to help with these challenges. We can digitial manage our entries in 
-a database, use an object oriented model for designing queries, establishing new 
-views and creating entries with either highly formatted markdown syntax or 
-plain text format. In addition, Stellar can track goals and tasks letting you 
-know what is complete, incomplete, and days left to complete them.  
+Classification-division is a technique of “dividing” a topic into it’s component parts or “classifying” items into groups showing similarity. Stellar achieves this through the use of tags but restrains you to one level of “division” and one level of “similarity” providing a more empirical method.  
 
-This tool has grown in complexity over the months. I've tried to keep a unix like 
-philosophy which is to do one thing well versus too much. Stellar is portable 
-across Windows, MacOSX and Linux allowing anyone to scale the project to their 
-needs. Browsers that I've tested are IE, Firefox, Chrome and Brave. Stellar is 
-a unlicensed application. Anyone is free to copy, modify, publish, use, sell, 
-or distribute this software, either in source code form or as a compiled 
-binary, for any purpose, comercial or non-commercial, and by any means.  
+Reviewing your notes periodically is an example of spaced-repetition. Taking notes by uniting separate bits of information through meaning is an example of conceptual chunking. Doing both helps move fundamental concepts and techniques you learn from your working memory to your long-term memory which is the main idea of keeping a journal.  
 
-What are some key features of Stellar? See below for some gif's and descriptions 
-of what it can do.  
+Here are the requirements of stellar that are necessary in making the above possible.  
 
-  * Stellar uses a markdown editor to create notes, goals and tasks. When using 
-    markdown syntax the editor will display the rendered syntax in realtime to 
-    help you correct and format your entires only once versus going back and 
-    forth in getting your syntax right. Adding an image is very easy, just 
-    locate your image in a file viewer and drag/drop it into the editor. Images 
-    are saved in a `yyyy/mm/dd` format under `/media` to help improve queries.  
+  * Stellar shall use an editor supporting plain text format and markup while converting markup in real time for visualization.  
 
-    ![](./gifs/markdownx.gif)  
+  * Stellar shall use the jsCalendar widget to provide querying by date through click-based selectors (e.g. day, month, year).  
 
-  * Stellar uses [jsCalendar](https://gramthanos.github.io/jsCalendar/index.html) 
-    to allow you to easily browse recent entries for the month or even several 
-    years back. It highlights days that you took entries so you don't waste time 
-    searching days that have none.  
+  * Stellar shall use the package django-filters for custom searching of each models attribute and support additional filters if need be.  
 
-    ![](./gifs/jscalendar.gif)  
+  * Stellar shall provide the genre tag to divide notes into their respective categories (e.g. book, project, program, email, etc...) and classification tags for grouping items showing similarity.  
 
-  * Stellar uses [django_filters](https://django-filter.readthedocs.io/en/master/) 
-    to allow custom search methods. We can search via every attribute that a 
-    entry is made up of (e.g. title, date, content, tags, etc...).  
+  * Stellar shall include a light weight server where the web app can be broadcasted off the localhost or a provided IP address. It is assumed the user understands the security and performance limitation of Django's light weight server. It is also assumed that when broadcasting off an IP address the user is doing so inside an intranet from behind a protected firewall with limited traffic between end points.  
 
-    ![](./gifs/search.gif)  
+  * Stellar shall run on Windows, Linux, MacOSX and at the minimum support the 
+  four browsers IE, Chrome, Firefox, and Brave without any noticable issues regarding bootstrap formatting.  
 
-  * Stellar allows tagging in a unique way that at first may seem at a 
-    disadvantage. Only one tag can be given to each entry. If we assigned 5 tags 
-    to every entry for a 1000 entries we would have quite the selection of tags 
-    to search through. It would seem this would improve our queries 
-    categorically but in fact it adds entropy making it harder to search for a
-    specific entry. Stellar allows one additional attribute called a __Genre__ 
-    to add one extra level of classification. In combination of the __Genre__ 
-    and the generic tag called __Tag__, Stellar provides a more empirical method forcing 
-    you to think about how an entry should be classified.  
+  * Stellar shall support updates by simply executing `git pull`. It is assumed that by deleting the `.git` folder the user is opting out of receiving updates. It is also assumed that if the user wishes to version control their database files they must do so themselves.  
 
-    ![](./gifs/tags.gif)  
+  * Stellar shall include instructions on install and will also strongle emphasize the importance of using _Virtualenv_.  
 
-# <a name="Installation"></a>__Installation__  
+  * Stellar shall include the creation and managing of tasks and goals.  
 
-### __Prerequisites__  
+  * Stellar shall include the SOAR methodology for tracking achievements and performance metrics to make annual reviews go smoother.  
 
-  * Python 3+  
+  * Stellar shall include a link to the admin page in the navigation bar and enforce familiarization with it's interface.  
+
+#### <a name="Installation"></a>__Installation__  
+
+##### __Prerequisites__  
+
+  * Python Version 3.6+  
     [Downloading](https://wiki.python.org/moin/BeginnersGuide/Download)  
     [Installing](https://realpython.com/installing-python/)  
 
   * Pip  
-    Usually comes upon installing Python 3+. In not you can refer to the 
-    following link [here](https://pip.pypa.io/en/stable/) for specifics.  
+    Pip usually comes with the installation of Python but in the case it doesn't refer to the following link.  
+    [Installing](https://pip.pypa.io/en/stable/)  
 
   * Shell  
-    Starting the application requires starting a server. This application runs 
-    locally so the built in django development server will do fine and thus no 
-    configuring of another server is required. To run the server you must have 
-    a shell such as a bash shell in Linux/MacOSX or powershell in Windows. For 
-    configuration of each regarding python refer to the following links.  
-    [Python on Windows](https://docs.python.org/3.3/using/windows.html)  
-    [Python on Linux/MacOSX](https://docs.python.org/3.3/using/unix.html)  
+    A shell is a command line based environment referred to as the terminal on linux and Powershell or CommandPrompt on Windows. You will need it and as such will need to validate that your path variable is setup accordingly so that python and pip can be executed from the shell environment.  
+    [Windows Users](https://docs.python.org/3.3/using/windows.html)  
+    [Linux/MacOSX Users](https://docs.python.org/3.3/using/unix.html)  
 
   * Git  
+    Git is a version tracking tool and is recommended for downloadnig (aka cloning) the stellar repository down to your computer. The alternative is downloading the compressed archived.  
     [Download](https://git-scm.com)  
-    If cloning the repo you'll need git otherwise download the compressed 
-    archive.  
 
   * Virtualenv  
+    First off, if you don't use virtualenv then you should be. It is incredibly easy and will isolate the stellar python environment from your systems environment. This will need to be installed prior to the next section should you choose to use virtualenv. It is not a requirement to use but please do so for the sake of your environment.  
     [Pip Install](https://pypi.org/project/virtualenv/)  
-    Virtualenv will allow you to setup a virtual environment for installing all 
-    the dependencies. Running stellar doesn't require this but it will help 
-    isolate Stellar's dpendencies from existing dependencies residing on your 
-    system.  
 
-### __Installation__  
+##### __Installation__  
 
-##### **CLICK GIF FOR ENLARGED VIEW**  
+  * Clone the repository at this time or download the compressed archive.  
+    `git clone https://gitlab.com/shanedora/stellar.git`  
 
-![](./gifs/installation.gif)  
+  * Open your shell and navigate to the top level directory.  
+    `cd /path/to/stellar`  
 
-  1. Clone the repository either via `git clone` or downloading the repository as 
-     a compressed archive.  
-     `git clone https://gitlab.com/shanedora/stellar.git`  
+  * Create and activate virtual environment (recommended but not required)  
+    `virtualenv venv`  
+    `source ./venv/bin/activate`  
+      * NOTE: The second above for activating your virtual environment may differ slightly in its syntax. See the below section on __Running__ for what it might look like.  
 
-  2. Navigate into the top level directory `cd stellar/` and create a virtual 
-     environment and activate it.  
-     `virtualenv venv`  
-     `source ./venv/bin/activate`
+  * Install all the required dependencies.  
+    `pip install -r /path/to/requirements.txt`  
 
-  3. Install all the requirements for Stellar listed in the `requirements.txt` 
-     file or all at once via the following command.  
-     `pip install -r /path/to/requirements.txt`  
+  * If you timezone is not `America/Denver` then refer to [__this link__](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) for your preferred timezone. Once you have it open the file __`stellar/top_stellar/pjx_stellar/settings.py`__ and edit the line __`TIME_ZONE = 'America/Denver'`__ according to your timezone.  
 
-  4. Edit the `pjx_stellar/settings.py` on the line that says the following...  
+  * Create and apply database migrations while creating a admin account and collecting up all the static files into one place.  
+    `python manage.py makemigrations`  
+    `python manage.py migrate`  
+    `python manage.py createsuperuser`  
+    `python manage.py collectstatic`  
 
-     `TIME_ZONE = 'America/Denver'`
+#### <a name="Running"></a>__Running__  
 
-     to a timezone of your choosing. Viable timezones can be acquired from this 
-     [link](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Refer 
-     to the __TZ database name__ column for your prefered option.   
-
-  4. The following commands only need to be run once.  
-     `python manage.py makemigrations`  
-     `python manage.py migrate`  
-     `python manage.py createsuperuser`  
-     `python manage.py collectstatic`  
-
-# <a name="Running"></a>__Running__  
-
-Run Stellar requires activating your virtual environment and starting the light 
-weight server that comes prepackaged with django. Creating a virtual environment 
-like we did above isn't required but it is recommended. A typical startup 
-routine may look like the following...  
-
-  1. Open a shell and navigate to Stellar and activate the virtual environment.  
+  1. Open a shell and navigate to `stellar/` to activate your vitural environment if you haven't already. Coming straight from the installation section above then this will already be done.  
 
      __Windows Powershell__  
      `cd .\stellar\venv\Scripts`  
@@ -164,100 +113,56 @@ routine may look like the following...
      `.\activate.bat`  
 
      __Linux__  
-     `source ./stellar/venv/bin/activate`
+     `source ./stellar/venv/bin/activate`  
 
-  2. Start the light weight server.  
+  2. Start the light weight django server.  
 
-     __localhost:8000__  
+     __For broadcasting off localhost:8000...__  
      `python manage.py runserver`  
 
-     __myIP:8000__  
+     __For broadcasting off IP:8000...__  
      `python manage.py runserver 1.2.3.4:8000`  
-     
+
      NOTE:  
-     When broadcasting on your IP such as "1.2.3.4:8000" you will need to 
-     create a inbound rule for this on your firewall. Keep in mind that this 
-     is not recommended due to the limitation of the light weight server. In 
-     the case you need to share your journal with someone at work on a intranet 
-     within a protected firewall this can be done but just be aware that it 
-     can't handle heavy traffic.  
-     [Linux: Ubuntu/CentOS](http://davidwilson.me/2013/08/18/Testing-Django-on-mobile-device-locally.html)  
-     [Windows](https://www.tomshardware.com/news/how-to-open-firewall-ports-in-windows-10,36451.html)  
+     When broadcasting off an IP other than localhost it is your responsibility to create an inbound rule on your firewall. Only broadcast on an IP like this when you are behind a firewall within an intranet and you need to share your notes with a colleague or two. The django development server is not meant for production but it can handly a light load of users. For instructions on creating a inbound rule see the following links.  
+     [Linux Users](http://davidwilson.me/2013/08/18/Testing-Django-on-mobile-device-locally.html)  
+     [Window Users](https://www.tomshardware.com/news/how-to-open-firewall-ports-in-windows-10,36451.html)  
 
-  3. Open a browser (e.g. Chrome, IE, Firefox, Brave, etc...) and navigate to 
-     either `localhost:8000` or the ip you set above such as `1.2.3.4:8000`. 
-     Stellar will automatically pop-up on the homepage.  
+  3. Open a browser and navigate to `localhost:8000` or `yourIP:8000`. Stellar will appear landing you on the homepage.  
 
-Stopping stellar is quite easy but you can feel free to allow it to run as long 
-as you like. A typical routine for shutting it down is...  
+#### <a name="Stopping"></a>__Stopping__  
 
-  1. Terminating the process in the shell via `Ctrl+C`  
-  2. Deactivating your virtual environment by simply typing `deactivate`  
+Stopping stellar is quite easy but feel free to leave it running as long as you want. To stop execute `Ctrl+C` keystrokes from within your shell then deactivate your virtual environment by typing `deactivate` into the shell and pressing enter.  
 
----
+#### <a name="UserGuide"></a>__UserGuide__  
 
-# <a name="UserGuide"></a>__UserGuide__  
+__Admin__  
 
-__Adim__  
-
-The admin page lets you do an abundant amount of work. However, you will only 
-require it if you need to edit your notes, goals and tasks. As of now, marking 
-a goal or task as complete to make it disappear from the homepage can only be 
-accomplished through the admin page. When logging in to the admin page use 
-your username and password you set above.  
+Login with the credentials you created above in the last step of the installation section. From here you can access your notes, SOAR, goals, and tasks. This is the only way to edit past entries that you've made.  
 
 __Home__  
 
-You can get to home via clicking on the navbar link or the __S__ logo in the 
-navbar. Home displays tags, tasks, goals, and notes based on what day you've 
-selected in the calendar. The calendar shows days you've taken notes and allows 
-easy navigation to past entries via the calendar.  
+Home displays the jsCalendar widget. Click through the calendar for selecting different months/years. Click a day will display the notes off into the right hand column. Days with notes are highlighted in the calendar as a light gray color. Tags appear off the left. Clicking the tags will land you on another page showing all entries related to that tag. Ongoing (incomplete) Goals and Tasks are shown on the right column along with a badge to the left indicating the amount of days left to complete them.  
 
-Goals and tasks are only showed if they are incomplete. Remember you must go 
-into the Admin interface to mark a goal/task as complete or incomplete. Days 
-remaining to complete the goals/tasks are indicated to the left.  
+__Create--Notes__  
 
-Tags are also shown on the left panel. These tags are listed left to right as 
-most popular to least popular. A number is printed along side each tag 
-indicating the exact number of entries related to it. These tags are clickable 
-down to one level deep. This means that by clicking a tag it will redirect you 
-to another page that displays every note ever taken related to that tag. From 
-this page there are no further features that allow additional queries. If 
-further querying of entries are needed visit the search page.  
+The dropdown link _Create_ and sublink _Notes_ will redirect you to the page for creating note entries. Only the fields Tag and Genre are optional as sometimes you may not want to create a genere and/or tag but it is recommended you do for the sake of recalling entries in the future. Dates must be entered in the format shown. Today's date will be used by default. The body section is a markdown editor. Enter text with markup and a rendered view will be shown off to the right. Click the button _Create_ to submit the entry to the database.  
 
-__Notes__  
+__Create--SOAR__  
 
-Notes can be created by clicking on the "Notes" link in the navbar. Simply enter 
-information into all the fields. All fields are required! You can write your 
-notes in markdown format or plain text format. Writing in plain text may require 
-you to esacpe certain characters that are markdown syntax. Correctly rendered 
-text will appear to the right so you can validate what you're typing. Ensure 
-that the date field __is filled out in a `yyyy/mm/dd` format while zero padding 
-the `mm/mm` if needed!__ It will autofill to todays date otherwise.  
+The dropdown link _Create_ and sublink _SOAR_ will redirect you to the page for creating SOAR entries. Only the fields Tag and Genre are optional as sometimes you may not want to create a genre and/or tag but it is recommended you do for the sake of recalling entries in the future. Dates must be entered in the format shown. Today's date will be used by default. Each body's field is a markdown field. Enter text with markup and a rendered view will be shown off to the right. Click the button _Create_ to submit the entry to the database. Pre-inserted text is already entered into each body's field explaining what each field is. SOAR is how we make our end of year reviews easier. It's for capturing achievements and peformance metrics of things you've done. SOAR entries can be filled out weekly, monthly or whenever you feel like it.  
 
-Because the editor supports markdown sytax for formatting your text it will 
-also support html and some inline CSS!  
+__Create--Goals & Create--Tasks__  
+
+The dropdown link _Create_ and sublink _Goals or Tasks_ will redirect you to the page for creating goal/task entries. All fields are required here. The date field is the date that you expect to compelete the goal/task. The body field is a markdown field. Enter text with markup and a rendered view will be shown off to the right. click the button _Create_ to submit the entry to the database. By default all incomplete goals/tasks will be displayed on the homepage. Therefore, when you have completed the goal/task you must log into the admin interface, select _Goals or Tasks_, and find the goal/task of interest. _Goals or Tasks_ incomplete have a red colored `x` in the table. Click this entry and edit the complete field by checking the box which will mark it as complete. Now it will be removed from the homepage. On the homepage you will badges to the left of each goal/task indicating the amount of days left to complete it. When you get down to 0 days the badge will be red. When you get down to 1 day the badge will be yellow and for 2 or more days out the badge will be a navy blue.  
 
 __Search__  
 
-The search page presents a form. This form will allow querying of your entries 
-via every attribute related to a single entry. This form will not allow you to 
-search tasks and goals. For that you need to visit the Admin interface. If you 
-would like to export a list of entries from a search to PDF simply do the search 
-and then in your browser click __print-save_as-pdf__.  
+The dropdown link _Search_ will provide sublinks to various models to search which if not clear now are _Notes, SOAR, Goals and Tasks_. None of the fields are required so you can just pick one of them or two of them or even all them for carrying out relatively advanced searches of that respective model. Leaving all fields blank and click _Search_ will result in all notes being displayed. If you would like to export this page to a pdf simply do so by using your browsers print-to-pdf feature. Printing to pdf will not only capture what entries are displayed on the page but will show the data entered into the form so you can recreate the results in the future if need be.  
 
-__Goals__  
+#### <a name="Sources"></a>__Sources__  
 
-Goals can be created via the same method as you create notes. Remember that 
-once you complete a Goal you will have to visit the Admin interface by clicking 
-on the "Admin" link in the navbar and visiting that specific entry. From there 
-you can mark it as complete.  
+Building stellar has been an on going effort. Each year I add to stellar increasing it's scope and intended audience. If you have a suggestion feel free to email and I'll take it into consideration for the next release. A big thanks to the django reddit community for providing guidance when I needed it.  
 
-__Tasks__  
-
-Tasks can be created via the same method as Goals and Notes.  
-
-# <a name="Sources"></a>Sources  
-
-You're go-to-guide for learning more about Django.  
-[Django Docs](https://docs.djangoproject.com/en/2.1/)  
+__Cheers ~__  
+__Shane__  
