@@ -18,15 +18,9 @@ __Shane Yost__
 
 #### <a name="Introduction"></a>__Introduction__  
 
-There are two types of students/engineers, those that maintain a stellar looking journal and those that do not. Whether or not you do doesn’t mean you’re a better student/engineer. How effective a journal can be is directly proportional to the efficiency in maintaining it. This is why you either do or do not there is no try.  
+There are two types of students/engineers, those that maintain a stellar looking journal and those that do not. How effective a journal can be is directly proportional to how efficient it can be in maintaining it.  
 
-From a high level, stellar aims to do three things. First, it makes keeping a journal efficient. Secondly, it enforces a professional writing pattern called classification-division. Lastly, it encourages two learning techniques called spaced-repetition and conceptual-chunking.  
-
-Classification-division is a technique of “dividing” a topic into it’s component parts or “classifying” items into groups showing similarity. Stellar achieves this through the use of tags but restrains you to one level of “division” and one level of “similarity” providing a more empirical method.  
-
-Reviewing your notes periodically is an example of spaced-repetition. Taking notes by uniting separate bits of information through meaning is an example of conceptual chunking. Doing both helps move fundamental concepts and techniques you learn from your working memory to your long-term memory which is the main idea of keeping a journal.  
-
-Here are the requirements of stellar that are necessary in making the above possible.  
+Here are the requirements of stellar  
 
   * Stellar shall use an editor supporting plain text format and markup while converting markup in real time for visualization.  
 
