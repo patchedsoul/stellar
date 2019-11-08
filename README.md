@@ -1,4 +1,4 @@
-![](./gifs/showcase.gif)  
+![](./gifs/stellar.gif)  
 
 # __Welcome to Stellar!__  
 
