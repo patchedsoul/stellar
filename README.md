@@ -22,7 +22,7 @@ There are two types of students/engineers, those that maintain a stellar looking
 
 Here are the requirements of stellar  
 
-  * Stellar shall use an editor supporting plain text format and markup while converting markup in real time for visualization.  
+  * Stellar shall use an editor supporting plain text format and markup while rendering markup as you type.  
 
   * Stellar shall use the jsCalendar widget to provide querying by date through click-based selectors (e.g. day, month, year).  
 
